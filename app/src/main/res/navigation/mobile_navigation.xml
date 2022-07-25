@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.app5m.mulheremfoco.ui.fragment.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_trainingDetailFragment"
+            app:destination="@id/trainingDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diaryFragment"
+        android:name="br.com.app5m.mulheremfoco.ui.fragment.main.home.DiaryFragment"
+        android:label="fragment_diary"
+        tools:layout="@layout/fragment_diary" />
+    <fragment
+        android:id="@+id/foodPlanFragment"
+        android:name="br.com.app5m.mulheremfoco.ui.fragment.main.home.FoodPlanFragment"
+        android:label="fragment_food_plan"
+        tools:layout="@layout/fragment_food_plan" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="br.com.app5m.mulheremfoco.ui.fragment.main.home.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/trainingDetailFragment"
+        android:name="br.com.app5m.mulheremfoco.ui.fragment.main.home.TrainingDetailFragment"
+        android:label="fragment_training_detail"
+        tools:layout="@layout/fragment_training_detail" >
+        <action
+            android:id="@+id/action_trainingDetailFragment_self"
+            app:destination="@id/trainingDetailFragment" />
+    </fragment>
+</navigation>
